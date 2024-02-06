@@ -1,0 +1,6 @@
+1)What is CDN?
+Content Delivery Network
+a network of distributed servers to Delivery content(such as web pages, images, videos, scripts, etc.) to the user based on geograpahical location
+when a user requests a content..CDN serves the content from the server closest to the user instead of the original server respond.
+Directly helps reducing latency, improve server performance etc
+

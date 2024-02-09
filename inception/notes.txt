@@ -4,3 +4,26 @@ a network of distributed servers to Delivery content(such as web pages, images, 
 when a user requests a content..CDN serves the content from the server closest to the user instead of the original server respond.
 Directly helps reducing latency, improve server performance etc
 
+2)What is Emmet?
+Emmet is a toolkit used for fast efficient involvement of code using abbrevations expansion
+
+3)Difference between a Library and Framework?
+Library is a collection of reusable code which can be called from an application and use thier data/code
+where framework has a structure and set of rules that needs to be followed
+
+4) Why is React known as React?
+React is a JavaScript library for building user interfaces. It was developed by Facebook, and the name “React” was chosen because it is meant to help developers build user interfaces that are fast and responsive, or “reactive.” The library was designed to “react” to changes in data.
+The idea behind React is to build reusable components that can be rendered on the front-end, rather than writing a new piece of code every time you need to display something on the screen. This makes it easier and more efficient to build complex user interfaces.
+
+5) What is crossorigin in script tag?
+
+
+6) What is diference between React and ReactDOM
+React is the core library for building UI components and managing their state, while ReactDOM is responsible for rendering those components into the DOM and handling interactions with the browser.
+
+7) What is difference between react.development.js and react.production.js files via CDN?
+The react.development.js file is larger and contains additional development-specific warnings and debugging features, while the react.production.js file is smaller and optimized for production use, without the extra warnings and debugging features.
+
+8)What is async and defer?
+async loads and executes the script asynchronously, potentially interrupting the HTML parsing, while defer loads the script asynchronously but ensures it's executed after the HTML parsing is complete.
+

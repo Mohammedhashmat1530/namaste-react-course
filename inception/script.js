@@ -1,6 +1,6 @@
 setTimeout(()=>{
 
-    var ele = document.getElementById("hello"); // Use "root" instead of "hello"
+    var ele = document.getElementById("hello"); 
     console.log(ele);
   
     var innerHtml = ele.innerHTML;

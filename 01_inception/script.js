@@ -9,6 +9,6 @@ setTimeout(() => {
     // Use a timeout of 0 milliseconds to ensure it's executed after the current stack
     setTimeout(() => {
         ele.style.display = "block";
-    }, 2000)
+    }, 1000)
 
 }, 0)

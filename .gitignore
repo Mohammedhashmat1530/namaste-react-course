@@ -1,3 +1,5 @@
 assignment-1.pdf
 assignment-2.pdf
 node_modules
+/02_Igniting_our_App/dist
+/02_Igniting_our_App/.parcel-cache

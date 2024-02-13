@@ -1,4 +1,5 @@
 console.log("na")
+/*
 setTimeout(() => {
 
     var ele = document.getElementById("hello");
@@ -13,3 +14,4 @@ setTimeout(() => {
     },2000)
 
 }, 0)
+*/

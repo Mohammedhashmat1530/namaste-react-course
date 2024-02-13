@@ -1,0 +1,18 @@
+JSX
+    its not HTML in JS
+    its HTML-Like or XML-Like Syntax
+
+
+React.createElement => ReactElement - JS Object => HTMLElement(render)
+
+JSX => React.createElement => ReactElement - JS Object => HTMLElement(render) 
+
+Attributes in JSX: 
+ - The change of class attribute to className:
+ - Creation of custom attributes:We can also use custom attributes in JSX. For custom attributes, the names of such attributes should be prefixed by data-* attribute.
+
+Rules to Write JSX:
+ - Always return a single Root Element: When there are multiple elements in a component and you want to return all of them wrap them inside a single component
+ - Close all the tags: When we write tags in HTML some of them are self closing like the <img> tag but JSX requires us to close all of them so image tag will be represented as <img />
+ - Use camelCase convention wherever possible: When writing JSX if we want to give class to a tag we have to use the className attribute which follows camelCase convention.
+

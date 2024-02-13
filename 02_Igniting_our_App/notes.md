@@ -13,3 +13,8 @@
  - Error Handling
  - HTTPs
  - Tree Shaking (remove unused code )
+
+
+ Tree shaking is a technique used in JavaScript build tools, particularly in module bundlers like Webpack, Rollup, and Parcel, to eliminate unused code (dead code) from the final bundle.
+
+ 

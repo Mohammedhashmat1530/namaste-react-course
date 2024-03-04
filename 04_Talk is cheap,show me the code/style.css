@@ -27,10 +27,6 @@
 }
 
 .nav-items ul li:hover{
-    padding: 15px;
-    list-style-type: none;
-    font-size: 21px;
-    margin-top: 9px;
     color: #F85547;
     
 }

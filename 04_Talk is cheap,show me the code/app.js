@@ -1,6 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+/*
+
+header
+    -logo
+    -nav-items
+body
+    -Search
+    -Resturant container
+        -resturant card
+            -img
+            -name of res,rating,cusine,delivery time
+footer
+    -copyright
+    -links
+    -address
+    -contact
+    
+    */
+
 const Header =()=>{
     return (
         <div className='header'>
@@ -31,3 +50,5 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
 root.render(<AppLayout />);
+
+// 59:22

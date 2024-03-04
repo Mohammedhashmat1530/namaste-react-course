@@ -16,7 +16,7 @@ React is a JavaScript library for building user interfaces. It was developed by 
 The idea behind React is to build reusable components that can be rendered on the front-end, rather than writing a new piece of code every time you need to display something on the screen. This makes it easier and more efficient to build complex user interfaces.
 
 5) What is crossorigin in script tag?
-
+The crossorigin attribute sets the mode of the request to an HTTP CORS Request.
 
 6) What is diference between React and ReactDOM
 React is the core library for building UI components and managing their state, while ReactDOM is responsible for rendering those components into the DOM and handling interactions with the browser.

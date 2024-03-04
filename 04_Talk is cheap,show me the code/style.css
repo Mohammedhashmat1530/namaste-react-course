@@ -1,0 +1,38 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #202A36;
+    color: #D7DFDF;
+}
+
+.logo{
+    padding-left: 10px;
+    width: 110px;
+}
+
+.nav-items{
+    padding: 0px 50px;
+}
+
+.nav-items ul{
+    display: flex;
+
+}
+
+.nav-items ul li{
+    padding: 15px;
+    list-style-type: none;
+    font-size: 19px;
+    margin-top: 9px;
+}
+
+.nav-items ul li:hover{
+    padding: 15px;
+    list-style-type: none;
+    font-size: 21px;
+    margin-top: 9px;
+    color: #F85547;
+    
+}
+
+

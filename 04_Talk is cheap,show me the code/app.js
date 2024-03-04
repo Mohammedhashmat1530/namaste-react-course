@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import restaurantList from './data.js';
 
 /*
 
@@ -39,22 +40,30 @@ const Header =()=>{
 }
 
 // Restaurant card component: Image, name, cuisine
-const RestaurantCard = () => {
+const RestaurantCard = ({
+  cloudinaryImageId,
+  name,
+  cuisines,
+  area,
+  lastMileTravelString,
+  costForTwoString,
+  avgRating,
+}) => {
     return (
       <div className="card">
         <img
           src={
             "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
-            'bz9zkh2aqywjhpankb07'
+            cloudinaryImageId
           }
         />
-        <h2>pizza</h2>
-        <h4>itilan</h4>
-        <h4>NAD</h4>
+        <h2>{name}</h2>
+        <h4>{cuisines.join(", ")}</h4>
+        <h4>{area}</h4>
         <span>
-          <h4>⭐5+</h4>
-          <h4>2.9kms</h4>
-          <h4>₹400 FOR TWO</h4>
+          <h4>⭐<i class="fa-solid fa-star"></i>{avgRating}</h4>
+          <h4>{lastMileTravelString}</h4>
+          <h4>{costForTwoString}</h4>
         </span>
       </div>
     )
@@ -66,16 +75,11 @@ const RestaurantCard = () => {
     return (
       <div className="restaurant-list">
         
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
+        <div className="restaurant-list">
+      {restaurantList.map((restaurant) => {
+        return <RestaurantCard key={restaurant.data.id} {...restaurant.data} />;
+      })}
+      </div>
         
 
       </div>

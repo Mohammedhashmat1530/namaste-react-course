@@ -47,6 +47,7 @@
     padding: 10px;
     margin: 20px;
     cursor: pointer;
+    
 }
 
 .card > img{
@@ -61,7 +62,7 @@
 
 .card > span > h4{
     text-align: center;
-    padding-left: 15px;
+    
 }
 
 .card > span > h4:first-child{

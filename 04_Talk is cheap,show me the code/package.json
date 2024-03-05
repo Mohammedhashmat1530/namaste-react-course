@@ -2,10 +2,10 @@
   "name": "lec-4",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-prod": "parcel build src/index.html" 
+    "build-prod": "parcel build index.html" 
   },
   "author": "",
   "license": "ISC",

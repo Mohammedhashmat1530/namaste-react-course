@@ -106,3 +106,22 @@
     color: #76eded;
     text-decoration: none;
 }
+
+.custom-selecfilter{
+    background-color: #2F3C7E;
+   display:flex;
+    
+    
+}
+
+.custom-selecfilter select{
+    margin: 15px;
+    height: 22px;
+    width: 326px;
+   background-color: #FBEAEB;
+   color: #2F3C7E;
+   font-size: 14px;
+   font-weight: 550;
+   border: 0px;
+   border-radius: 4px;
+}

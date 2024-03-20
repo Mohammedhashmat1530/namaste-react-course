@@ -11,7 +11,7 @@ const Body = () => {
   const [restaurantList, updateList] = useState([]);
   const [initialized, setInitialized] = useState(false);
   const [SearchTxt, setSearchTxt] = useState('');
-  const [errorMessage, setErrorMessage] = useState("");
+ 
 
 
   const handleOptionChange = (event) => {
@@ -24,11 +24,9 @@ const Body = () => {
   useEffect(() => {
     setTimeout(() => {
       updateList(restaurantlist);
-   
       setInitialized(true)
     }, 2500)
   }, []);
-
 
 
   const searchAction = () => {
@@ -88,7 +86,7 @@ const Body = () => {
         <button className="search-btn" onClick={searchAction}>Search</button>
       </div>
     </div>
-    {errorMessage && <div className="error-container">{errorMessage}</div>}
+    
     {restaurantList.length === 0 && <Shimmer />}
 
 

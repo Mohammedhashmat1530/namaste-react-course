@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
+import { SearchError } from "./SearchError";
 import restaurantlist from "../utils/data";
 import Shimmer from "./Shimmer";
 
@@ -8,7 +9,10 @@ import Shimmer from "./Shimmer";
 const Body = () => {
   const [selectedOption, setSelectedOption] = useState('');
   const [restaurantList, updateList] = useState([]);
-  const [initialized, setInitialized] = useState(false)
+  const [initialized, setInitialized] = useState(false);
+  const [SearchTxt, setSearchTxt] = useState('');
+  const [Errtxt, setErrtxt] = useState('')
+
 
   const handleOptionChange = (event) => {
     const option = event.target.value;
@@ -25,11 +29,20 @@ const Body = () => {
     }, 2500)
   }, []);
 
-  const fetchData = async () => {
-    const data = await fetch("https://foodfire.onrender.com/api/restaurants?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING")
-    const json = await data.json();
+
+
+  const searchAction = () => {
+
+    let searchlist = restaurantlist.filter((list) => list.data.name.toLowerCase().replace(/ /g, "").includes(SearchTxt.toLowerCase()));
+    console.log(searchlist)
+    updateList(searchlist)
+    if (searchlist.length === 0) {
+      setErrtxt("No matches restaurant found!!!")
+    }
 
   }
+
+
   // for filtering 
   useEffect(() => {
     if (selectedOption == 0) {
@@ -61,7 +74,7 @@ const Body = () => {
 
 
   return (<>
-    
+
     <div className="options">
       <div className="custom-selecfilter" >
         <select value={selectedOption} onChange={handleOptionChange}>
@@ -71,26 +84,23 @@ const Body = () => {
           <option value="3">low delivery time</option>
         </select>
       </div>
+      <div className="search" >
+        <input type="text" placeholder="search Here..." onChange={(e) => setSearchTxt(e.target.value)} />
+        <button className="search-btn" onClick={searchAction}>Search</button>
+      </div>
+    </div>
+    
+    {restaurantList.length === 0 && <Shimmer />}
+
+
+    <div className="restaurant-list">
+      {restaurantList.map((restaurant) => {
+        return <RestaurantCard key={restaurant.data.id} {...restaurant.data} />;
+      })}
     </div>
 
-    
-    {restaurantList.length === 0 && (
-        <>
-          
-          <Shimmer />
-        </>
-      )}
-    
-   
-
-      <div className="restaurant-list">
-        {restaurantList.map((restaurant) => {
-          return <RestaurantCard key={restaurant.data.id} {...restaurant.data} />;
-        })}
-      </div>
 
 
-    
   </>
   )
 }

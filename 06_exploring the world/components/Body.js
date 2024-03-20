@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
-import { SearchError } from "./SearchError";
+
 import restaurantlist from "../utils/data";
 import Shimmer from "./Shimmer";
 
@@ -11,7 +11,7 @@ const Body = () => {
   const [restaurantList, updateList] = useState([]);
   const [initialized, setInitialized] = useState(false);
   const [SearchTxt, setSearchTxt] = useState('');
-  const [Errtxt, setErrtxt] = useState('')
+  const [errorMessage, setErrorMessage] = useState("");
 
 
   const handleOptionChange = (event) => {
@@ -24,7 +24,7 @@ const Body = () => {
   useEffect(() => {
     setTimeout(() => {
       updateList(restaurantlist);
-      console.log("here")
+   
       setInitialized(true)
     }, 2500)
   }, []);
@@ -36,9 +36,8 @@ const Body = () => {
     let searchlist = restaurantlist.filter((list) => list.data.name.toLowerCase().replace(/ /g, "").includes(SearchTxt.toLowerCase()));
     console.log(searchlist)
     updateList(searchlist)
-    if (searchlist.length === 0) {
-      setErrtxt("No matches restaurant found!!!")
-    }
+   
+   
 
   }
 
@@ -89,7 +88,7 @@ const Body = () => {
         <button className="search-btn" onClick={searchAction}>Search</button>
       </div>
     </div>
-    
+    {errorMessage && <div className="error-container">{errorMessage}</div>}
     {restaurantList.length === 0 && <Shimmer />}
 
 

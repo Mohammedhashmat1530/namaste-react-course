@@ -139,7 +139,7 @@
 
 .options {
     width: 100%;
- gap: 250px;
+    gap: 250px;
     background-color: #2F3C7E;
     display: flex;
 
@@ -158,7 +158,8 @@
     border: 0px;
     border-radius: 4px;
 }
-.search input{
+
+.search input {
     margin: 15px;
     margin-left: 25px;
     height: 22px;
@@ -171,13 +172,14 @@
     border-radius: 4px;
 }
 
-.search input::placeholder{
-  
+.search input::placeholder {
+
     background-color: #FBEAEB;
     color: #2F3C7E;
-    
+
 }
-.search .search-btn{
+
+.search .search-btn {
     border: 0px;
     width: 65px;
     height: 24px;
@@ -186,6 +188,7 @@
     font-weight: 600;
     border-radius: 3px;
 }
+
 /* shimmer styles */
 /*Shimmer CSS */
 .shimmer-container {
@@ -247,7 +250,7 @@
 }
 
 /* Search error css */
-.search-error{
+.search-error {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -258,11 +261,12 @@
     font-weight: 600;
     flex-direction: column;
 }
-.search-error h3{
+
+.search-error h3 {
     margin-bottom: 30px;
 }
 
-.search-error h5{
+.search-error h5 {
     color: #7e452f;
     font-size: 30px;
     font-weight: 600;
@@ -270,7 +274,7 @@
     margin-left: 20px;
 }
 
-.search-error p{
+.search-error p {
     color: red;
     font-size: 26px;
     font-weight: 600;

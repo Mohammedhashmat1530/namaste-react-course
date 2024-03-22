@@ -44,25 +44,25 @@ const Body = () => {
     if (selectedOption == 0) {
       console.log('0')
       if (initialized) {
-        updateList(restaurantlist);
+        setSearchList(restaurantList)
       }
     }
     else if (selectedOption == 1) {
       console.log('1')
-      const list = restaurantlist.filter(res => res.data.avgRating > "4.0")
-      updateList(list);
+      const list = restaurantList.filter(res => res.data.avgRating > "4.0")
+      setSearchList(list)
       console.log(list)
     }
     else if (selectedOption == 2) {
       console.log('2')
-      const list = restaurantlist.filter(res => res.data.avgRating <= "3.9")
-      updateList(list);
+      const list = restaurantList.filter(res => res.data.avgRating <= "3.9")
+      setSearchList(list)
       console.log(list)
     }
     else if (selectedOption == 3) {
       console.log('3')
-      const list = restaurantlist.filter(res => res.data.lastMileTravelString < "6.5 kms")
-      updateList(list);
+      const list = restaurantList.filter(res => res.data.lastMileTravelString < "6.5 kms")
+      setSearchList(list)
       console.log(list)
     }
   }, [selectedOption]);

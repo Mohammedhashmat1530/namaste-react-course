@@ -25,8 +25,12 @@
     font-size: 19px;
     margin-top: 9px;
 }
+.nav-item{
+    text-decoration: none;
+    color: white;
+}
 
-.nav-items ul li:hover {
+.nav-item:hover {
     color: #F85547;
 
 }
@@ -311,7 +315,56 @@
     padding: 10px 15px;
 }
 
+.err-img .error-back-home:hover{
+    background-color:turquoise;
+    
+}
+
 .err-img .error-back-home a{
     text-decoration: none;
 
 }
+
+.err-img .error-back-home a:hover{
+    text-decoration: none;
+    color: orange;
+
+}
+
+/* About us page CSS Start */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 100px auto 0px;
+    justify-content: center;
+    align-items: center;
+    height: 61vh;
+  }
+  .about-container .about-left {
+    padding-left: 10px;
+  }
+  .about-container .about-left h1 {
+    font-size: 70px;
+  }
+  .about-container .about-left h1 span {
+    background-color: orange;
+    padding: 0 10px;
+    border-radius: 15px;
+    color: white;
+  }
+  .about-container .about-left h4 {
+    font-size: 25px;
+    padding-top: 10px;
+    font-style: italic;
+  }
+  .about-container .about-left h4 span {
+    color: red;
+  }
+  .about-container .about-right {
+    padding-left: 20px;
+  }
+  .about-container .about-right img {
+    width: 500px;
+    padding-right: 70px;
+  }

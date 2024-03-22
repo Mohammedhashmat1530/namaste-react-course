@@ -1,5 +1,6 @@
 import { LOGO } from '../utils/links'
 import React, { useEffect, useState,useEffect } from 'react';
+import {Link} from 'react-router-dom'
 
 
 const Header = () => {
@@ -16,14 +17,14 @@ const Header = () => {
     return (
         <div className='header'>
             <div className='Logo-div'>
-            <a href="/">  <img className='logo' src={LOGO} /></a>
+            <Link to="/">  <img className='logo' src={LOGO} /></Link>
             </div>
             <div className='nav-items'>
                 <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Cart</li>
+                    <li><Link to='/' className='nav-item' >Home</Link></li>
+                    <li><Link to='/about'className='nav-item'  >About Us</Link></li>
+                    <li><Link to='/contact' className='nav-item' >Contact Us</Link></li>
+                    <li className='nav-item' >Cart</li>
                     <li className={BtnText === "LogIn" ? "login-btn" : "logout-btn"} onClick={login_action}><button>{BtnText}</button></li>
                 </ul>
             </div>

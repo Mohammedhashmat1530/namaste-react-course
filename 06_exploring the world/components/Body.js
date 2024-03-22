@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
-
+import { SearchError } from "./SearchError";
 import restaurantlist from "../utils/data";
 import Shimmer from "./Shimmer";
 
@@ -11,6 +11,7 @@ const Body = () => {
   const [restaurantList, updateList] = useState([]);
   const [initialized, setInitialized] = useState(false);
   const [SearchTxt, setSearchTxt] = useState('');
+  const [SearchList,setSearchList]=useState([]);
  
 
 
@@ -24,6 +25,7 @@ const Body = () => {
   useEffect(() => {
     setTimeout(() => {
       updateList(restaurantlist);
+      setSearchList(restaurantlist);
       setInitialized(true)
     }, 2500)
   }, []);
@@ -31,12 +33,9 @@ const Body = () => {
 
   const searchAction = () => {
 
-    let searchlist = restaurantlist.filter((list) => list.data.name.toLowerCase().replace(/ /g, "").includes(SearchTxt.toLowerCase()));
+    let searchlist = restaurantList.filter((list) => list.data.name.toLowerCase().replace(/ /g, "").includes(SearchTxt.toLowerCase()));
     console.log(searchlist)
-    updateList(searchlist)
-   
-   
-
+    setSearchList(searchlist)
   }
 
 
@@ -88,10 +87,10 @@ const Body = () => {
     </div>
     
     {restaurantList.length === 0 && <Shimmer />}
-
+    {SearchList.length === 0 && <SearchError />}
 
     <div className="restaurant-list">
-      {restaurantList.map((restaurant) => {
+      {SearchList.map((restaurant) => {
         return <RestaurantCard key={restaurant.data.id} {...restaurant.data} />;
       })}
     </div>

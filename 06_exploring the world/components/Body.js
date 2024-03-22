@@ -11,29 +11,35 @@ const Body = () => {
   const [restaurantList, updateList] = useState([]);
   const [initialized, setInitialized] = useState(false);
   const [SearchTxt, setSearchTxt] = useState('');
-  const [SearchList,setSearchList]=useState([]);
- 
-
+  const [SearchList, setSearchList] = useState([]);
 
   const handleOptionChange = (event) => {
     const option = event.target.value;
     setSelectedOption(option)
   }
 
-
   // one time useeffect when page reloads
   useEffect(() => {
-    setTimeout(() => {
-      updateList(restaurantlist);
-      setSearchList(restaurantlist);
-      setInitialized(true)
-    }, 2500)
+    fetchdata1();
   }, []);
+
+
+
+  const fetchdata1 = async () => {
+    const url = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.7440744&lng=83.24558979999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    const response = await fetch(url)
+    const json = await response.json()
+    console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
+    updateList(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+    setSearchList(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+    setInitialized(true)
+  }
+  
 
 
   const searchAction = () => {
 
-    let searchlist = restaurantList.filter((list) => list.data.name.toLowerCase().replace(/ /g, "").includes(SearchTxt.toLowerCase()));
+    let searchlist = restaurantList.filter((list) => list.info.name.toLowerCase().replace(/ /g, "").includes(SearchTxt.toLowerCase()));
     console.log(searchlist)
     setSearchList(searchlist)
   }
@@ -49,19 +55,19 @@ const Body = () => {
     }
     else if (selectedOption == 1) {
       console.log('1')
-      const list = restaurantList.filter(res => res.data.avgRating > "4.0")
+      const list = restaurantList.filter(res => res.info.avgRating > "4.2")
       setSearchList(list)
       console.log(list)
     }
     else if (selectedOption == 2) {
       console.log('2')
-      const list = restaurantList.filter(res => res.data.avgRating <= "3.9")
+      const list = restaurantList.filter(res => res.info.avgRating <= "4.2")
       setSearchList(list)
       console.log(list)
     }
     else if (selectedOption == 3) {
       console.log('3')
-      const list = restaurantList.filter(res => res.data.lastMileTravelString < "6.5 kms")
+      const list = restaurantList.filter(res => res.info.sla.lastMileTravelString < "6.5 kms")
       setSearchList(list)
       console.log(list)
     }
@@ -85,13 +91,13 @@ const Body = () => {
         <button className="search-btn" onClick={searchAction}>Search</button>
       </div>
     </div>
-    
+
     {restaurantList.length === 0 && <Shimmer />}
     {SearchList.length === 0 && <SearchError />}
 
     <div className="restaurant-list">
       {SearchList.map((restaurant) => {
-        return <RestaurantCard key={restaurant.data.id} {...restaurant.data} />;
+        return <RestaurantCard key={restaurant.info.id} {...restaurant.info} />;
       })}
     </div>
 

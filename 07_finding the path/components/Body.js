@@ -29,7 +29,6 @@ const Body = () => {
     const url = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.7440744&lng=83.24558979999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     const response = await fetch(url)
     const json = await response.json()
-    console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
     updateList(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
     setSearchList(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
     setInitialized(true)

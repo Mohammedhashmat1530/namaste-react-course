@@ -481,6 +481,7 @@ a{
 .res-stats{
     display: flex;
     justify-content:space-between;
+    gap: 56px;
 }
 p{
     color: white;
@@ -512,6 +513,7 @@ p:nth-child(1){
   
   .accordion-item {
     border-bottom: 2px solid #ccc;
+    margin-bottom: 30px;
   }
   
   .accordion-title {
@@ -525,15 +527,20 @@ p:nth-child(1){
   
   .accordion-title.active {
     background-color: #e0e0e0;
+    color: #2F3C7E;
   }
   
   .accordion-content {
     padding: 10px;
     display: none;
+    
   }
+
+
   
   .accordion-content.open {
     display: block;
+    border-bottom: 1px solid grey;
   }
 
   /* rsturant menu details */

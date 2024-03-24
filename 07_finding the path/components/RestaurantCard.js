@@ -1,4 +1,5 @@
 import { RES_IMG } from "../utils/links";
+import { Link } from "react-router-dom"
 
 
 // Restaurant card component: Image, name, cuisine
@@ -10,8 +11,10 @@ const RestaurantCard = ({
     sla,
     costForTwo,
     avgRating,
+    id
   }) => {
       return (
+       <a href={`/resturant/${id}`}>
         <div className="card">
           <img
             src={RES_IMG + cloudinaryImageId}
@@ -25,6 +28,8 @@ const RestaurantCard = ({
             <h4>{costForTwo}</h4>
           </span>
         </div>
+        </a>
+        
       )
     }
 

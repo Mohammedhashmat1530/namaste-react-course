@@ -3,11 +3,15 @@
     justify-content: space-between;
     background-color: #202A36;
     color: #D7DFDF;
+    height: 85px;
 }
 
 .logo {
     padding-left: 10px;
-    width: 110px;
+    width: 130px;
+    
+    
+  max-height: 100%;
 }
 
 .nav-items {
@@ -25,7 +29,8 @@
     font-size: 19px;
     margin-top: 9px;
 }
-.nav-item{
+
+.nav-item {
     text-decoration: none;
     color: white;
 }
@@ -65,14 +70,20 @@
     margin: 5px auto;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 .card {
     width: 250px;
     border-radius: 5px;
     box-shadow: -1px 4px 20px 14px rgba(0, 0, 0, 0.2);
     padding: 10px;
     margin: 20px;
- 
+    height: 400px;
     cursor: pointer;
+   
 
 }
 
@@ -289,43 +300,43 @@
 }
 
 /* 404 page */
-.err-img{
-    display:flex;
-    flex-direction:column;
+.err-img {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 
-    
+
 }
 
-.err-img h3{
+.err-img h3 {
     margin-top: 10px;
     font-size: 26px;
     color: red;
 }
 
-.err-img button{
+.err-img button {
     width: 86px;
 
 }
 
-.err-img .error-back-home{
+.err-img .error-back-home {
     background-color: orange;
     color: rgb(35, 33, 33);
     border-radius: 5px;
     padding: 10px 15px;
 }
 
-.err-img .error-back-home:hover{
-    background-color:turquoise;
-    
+.err-img .error-back-home:hover {
+    background-color: turquoise;
+
 }
 
-.err-img .error-back-home a{
+.err-img .error-back-home a {
     text-decoration: none;
 
 }
 
-.err-img .error-back-home a:hover{
+.err-img .error-back-home a:hover {
     text-decoration: none;
     color: orange;
 
@@ -340,62 +351,69 @@
     justify-content: center;
     align-items: center;
     height: 61vh;
-  }
-  .about-container .about-left {
+}
+
+.about-container .about-left {
     padding-left: 10px;
-  }
-  .about-container .about-left h1 {
+}
+
+.about-container .about-left h1 {
     font-size: 70px;
-  }
-  .about-container .about-left h1 span {
+}
+
+.about-container .about-left h1 span {
     background-color: orange;
     padding: 0 10px;
     border-radius: 15px;
     color: white;
-  }
-  .about-container .about-left h4 {
+}
+
+.about-container .about-left h4 {
     font-size: 25px;
     padding-top: 10px;
     font-style: italic;
-  }
-  .about-container .about-left h4 span {
+}
+
+.about-container .about-left h4 span {
     color: red;
-  }
-  .about-container .about-right {
+}
+
+.about-container .about-right {
     padding-left: 20px;
-  }
-  .about-container .about-right img {
+}
+
+.about-container .about-right img {
     width: 500px;
     padding-right: 70px;
-  }
+}
 
-  /* Contact us page CSS Start */
+/* Contact us page CSS Start */
 .contact-container {
     display: flex;
     flex-wrap: wrap;
     margin: 100px auto 70px;
     justify-content: space-evenly;
     overflow-y: hidden;
-    
-  }
-  
-  .contact-container .contact-right {
+
+}
+
+.contact-container .contact-right {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: x-large;
-  }
-  
-  .contact-container .contact-right form {
+}
+
+.contact-container .contact-right form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 10px;
-  }
-  
-  .contact-container .contact-right form input {
+}
+
+.contact-container .contact-right form input {
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
@@ -403,9 +421,9 @@
     box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
     border: 2px solid #aabcca;
     width: 50vh;
-  }
-  
-  .contact-container .contact-right form textarea {
+}
+
+.contact-container .contact-right form textarea {
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
@@ -413,9 +431,9 @@
     box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
     border: 2px solid #aabcca;
     width: 50vh;
-  }
-  
-  .contact-container .contact-right form button {
+}
+
+.contact-container .contact-right form button {
     padding: 10px 20px;
     margin: 10px;
     background-color: darkblue;
@@ -424,10 +442,130 @@
     cursor: pointer;
     border: none;
     border-radius: 8px;
-  }
-  
-  .contact-container .contact-right form button:hover {
+}
+
+.contact-container .contact-right form button:hover {
     background-color: darkgreen;
+}
+
+/* Contact us page CSS End */
+
+/* restaurant menu css start */
+.restaurant-header {
+    background-color: rgb(5, 14, 55);
+    display: flex;
+    justify-content: center;
+    height: 180px;
+
+}
+
+.res-img img {
+    width: 250px;
+    margin: 5px auto;
+    border-radius: 8px;
+    height: 170px;
+    margin-right: 52px;
+}
+
+.res-name {
+    color: white;
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 12px;
+}
+
+.res-cui {
+    color: rgb(170, 166, 166);
+    margin-bottom: 10px;
+}
+.res-stats{
+    display: flex;
+    justify-content:space-between;
+}
+p{
+    color: white;
+    font-size: 18px
+}
+
+p:nth-child(1){
+    width: 70px;
+    background-color:darkgreen;
+   text-align: center;
+   border-radius: 3px;
+}
+
+/* accordian css */
+.acc-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.accordion {
+    
+    width: 750px;
+    border: 1px solid white;
+    border-radius: 4px;
+    overflow: hidden;
+    
   }
   
-  /* Contact us page CSS End */
+  .accordion-item {
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .accordion-title {
+    background-color:#fffefe;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: PT Sans, Lato, Calibri, sans-serif;
+  }
+  
+  .accordion-title.active {
+    background-color: #e0e0e0;
+  }
+  
+  .accordion-content {
+    padding: 10px;
+    display: none;
+  }
+  
+  .accordion-content.open {
+    display: block;
+  }
+
+  /* rsturant menu details */
+  .menu-item{
+    display: flex;
+    flex-direction: row;
+    max-height: 250px;
+   
+  }
+
+  .item-cost{
+    color: rgb(24, 24, 24);
+  }
+
+  .item-desc{
+    color: grey;
+  }
+  
+
+  .menu-img-wrapper{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .menu-item-img{
+    width: 150px;
+  }
+
+  .add-btn{
+    width: 75px;
+    height: 30px;
+    background-color: rgb(255, 136, 0);
+  }

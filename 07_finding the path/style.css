@@ -548,7 +548,7 @@ p:nth-child(1){
     display: flex;
     flex-direction: row;
     max-height: 250px;
-   
+    justify-content:space-between
   }
 
   .item-cost{
@@ -564,6 +564,7 @@ p:nth-child(1){
     display:flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     gap: 5px;
   }
 
@@ -575,4 +576,6 @@ p:nth-child(1){
     width: 75px;
     height: 30px;
     background-color: rgb(255, 136, 0);
+    border: 2px solid darkorange;
+    border-radius: 6px;
   }

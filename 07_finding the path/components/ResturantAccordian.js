@@ -23,7 +23,7 @@ const Accordion = ({ items }) => {
 
 
         
-             {item?.content?.map((i) => (
+             {item.content?.map((i) => (
               
             
             
@@ -32,7 +32,7 @@ const Accordion = ({ items }) => {
             <div class="menu-item">
               <div class="menu-item-details">
                 <h3 class="item-title">{i.card.info.name}</h3>
-                <p class="item-cost">₹{(i.card.info.price)/100}</p>
+                <p class="item-cost">₹{(i.card.info.price)/100 ||  (i.card.info.defaultPrice)/100}</p>
                 <p class="item-desc">{i.card.info.description}</p>
               </div>
               <div class="menu-img-wrapper">

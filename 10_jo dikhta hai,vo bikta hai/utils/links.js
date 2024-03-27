@@ -1,0 +1,7 @@
+export const LINKEDIN = "https://www.linkedin.com/in/mohammed-hashmat/";
+
+export const LOGO = "https://s3.amazonaws.com/cdn.designcrowd.com/blog/39-Food-Delivery-Logos-That-Will-Leave-You-Hungry-For-More/food-delivery-by-simplepixelsl-brandcrowd.png";
+
+export const RES_IMG = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
+
+export const shimmer_card_unit=15

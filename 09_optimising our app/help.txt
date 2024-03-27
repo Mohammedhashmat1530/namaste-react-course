@@ -1,0 +1,2 @@
+code chunking or dynamic bundling
+lazy loading

@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './components/header.js';
 import Footer from './components/footer.js';
 import Body from './components/Body.js';
-import { RouterProvider, createBrowserRouter,Outlet } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom';
 
-import { About } from './components/About.js';
+// import { About } from './components/About.js';
 import { Error } from './components/Error.js';
-import { Contact } from './components/Contact.js';
+// import { Contact } from './components/Contact.js';
 import { RestaurantMenu } from './components/RestaurantMenu.js';
+
+const About = lazy(() => import('./components/About.js'));
+const Contact = lazy(()=>import('./components/Contact.js'))
 
 const AppLayout = () => {
     return (
@@ -24,30 +27,34 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <AppLayout />,
-        errorElement:<Error />,
-        children:[
+        errorElement: <Error />,
+        children: [
             {
-                path:'/',
+                path: '/',
                 element: <Body />,
             },
             {
-                path:'/about',
-                element: <About />
+                path: '/about',
+                element: (
+                    <Suspense fallback={'Loading...'}>
+                    <About />
+                  </Suspense>
+                ),
             },
             {
-                path:'/contact',
-                element:<Contact />
+                path: '/contact',
+                element: (<Suspense fallback={<h1>loading contact us page ....</h1>}> <Contact /></Suspense>)
             },
             {
-                path:"/resturant/:id",
-                element:<RestaurantMenu />
+                path: "/resturant/:id",
+                element: <RestaurantMenu />
             }
-            
+
         ]
-      
+
     },
-   
-    
+
+
 ])
 
 

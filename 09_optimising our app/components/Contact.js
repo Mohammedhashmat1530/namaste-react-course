@@ -1,7 +1,7 @@
 import { useState } from "react";
 import contact from "../Images/Contact-Us.png";
 
-export const Contact = () => {
+export default Contact = () => {
   const [message, setMessage] = useState(false);
     const handleSubmit = (e) => {
         e.preventDefault();

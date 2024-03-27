@@ -1,6 +1,6 @@
 import food from "../Images/burger-image.png";
 
-export const About = () => {
+export default About = () => {
   return (
     <div className="about-container">
       <div className="about-left">
